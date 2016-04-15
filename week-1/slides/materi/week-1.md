@@ -1,5 +1,8 @@
-# Kursus Coding Froyo Framework
-## Week 1: Pengenalan Pemrograman dan Computational Thinking
+# Week 1:
+
+## Pengenalan Pemrograman dan Computational Thinking
+
+Kursus Coding Froyo Framework
 
 ---
 
@@ -9,13 +12,13 @@
 
 # Computational Thinking
 
+--
+
 - Memecah masalah yang besar, yang bisa dipecahkan dalam berbagai cara
 - Menjadi masalah-masalah yang lebih kecil, yang dipecahkan dengan cara yang spesifik
 - Ini adalah salah satu metode pemecahan masalah 
 
----
-
-# Computational Thinking
+--
 
 Melibatkan hal-hal berikut:
 
@@ -28,13 +31,15 @@ Melibatkan hal-hal berikut:
 
 ---
 
-# Computational Thinking: Contoh
+## Computational Thinking
+
+Contoh
+
+--
 
 Bagaimana membuat sistem pembayaran tol non-tunai?
 
-----
-
-# Computational Thinking: Contoh
+--
 
 - Uang dalam bentuk kartu
 - Kartu mengandung sejumlah uang
@@ -47,37 +52,31 @@ Bagaimana membuat sistem pembayaran tol non-tunai?
         * Saldo tidak akan berkurang
         * Pintu tol tetap tertutup
 
----
+--
 
-# Computational Thinking: Contoh
+Uang dalam bentuk kartu
 
-1. Uang dalam bentuk kartu
 ![e-money 1](https://app.box.com/representation/file_version_64000006601/image_2048/1.png)
 
----
+--
 
-# Computational Thinking: Contoh
+Kartu mengandung sejumlah uang
 
-2. Kartu mengandung sejumlah uang
 ![e-money 2](https://app.box.com/representation/file_version_63999915733/image_2048/1.png)
 
----
+--
 
-# Computational Thinking: Contoh
+Untuk membayar, kartu dibaca oleh alat tertentu
 
-3. Untuk membayar, kartu dibaca oleh alat tertentu
 ![e-money 3](https://app.box.com/representation/file_version_63999915073/image_2048/1.png)
 
----
+--
 
-# Computational Thinking: Contoh
+Ketika dibaca, saldo dalam kartu diketahui ...
 
-4. Ketika dibaca, saldo dalam kartu diketahui ...
 ![e-money 4](https://app.box.com/representation/file_version_63999915433/image_2048/1.png)
 
----
-
-# Computational Thinking
+--
 
 - Pemecahan masalah dilakukan dengan memecah permasalahan tadi menjadi langkah-langkah yang lebih kecil
 - Langkah-langkah ini kemudian akan diimplementasikan melalui pemrograman
@@ -86,7 +85,11 @@ Bagaimana membuat sistem pembayaran tol non-tunai?
 
 ---
 
-# Computational Thinking: Latihan
+## Computational Thinking 
+
+Latihan
+
+--
 
 Aplikasikan computational thinking untuk memecahkan masalah berikut:
 
@@ -99,9 +102,7 @@ Gambarkan diagram solusi Anda pada selembar kertas, lalu presentasikan
 
 # Apa itu programming?
 
----
-
-# Programming/Pemrograman
+--
 
 - Sebuah kegiatan mengimplementasikan algoritma ke dalam perintah-perintah dan bentuk yang dimengerti oleh komputer
 - Perintah-perintah ini nampak sebagai kode
@@ -116,13 +117,15 @@ Gambarkan diagram solusi Anda pada selembar kertas, lalu presentasikan
 
 - Merumuskan masalah
 - Menjabarkan masalah ke dalam langkah-langkah yang lebih kecil
-- Menentukan algortima untuk memecahkan langkah-langkah tersebut
+- Menentukan algoritma untuk memecahkan langkah-langkah tersebut
 - Mengimplementasikan algoritma dengan programming
 - Mengevaluasi hasil programming
 
 ---
 
 # Mengapa Melakukan Programming?
+
+--
 
 - Melatih kemampuan menyelesaikan masalah
 - Memungkinkan untuk memanfaatkan komputer lebih dalam, sebagai alat memecahkan masalah
@@ -317,3 +320,98 @@ Membuat website yang menampilkan foto dari Instagram
 - Cukup menggunakan:
     + text editor untuk mengetik kode dan 
     + browser untuk menguji halaman
+
+---
+
+## Praktek Membuat Halaman Web Sederhana
+
+---
+
+![Halaman Web](/materi/slide-images/web-pohon.png)
+
+---
+
+## Struktur Dokumen HTML
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    ...
+  </head>
+
+  <body>
+    ...
+  </body>
+</html>
+```
+
+---
+
+## Memberi Judul Pada Browser
+
+```html
+<head>
+  <title>Judul Halaman</title>
+</head>
+```
+
+---
+
+## Isi Dokumen HTML
+
+```html
+<body>
+  <h1>Sebuah Cerita Tentang Pohon</h1>
+
+  <p>Ini adalah paragraf</p>
+</body>
+```
+
+---
+
+## Menampilkan Image Resource
+
+```html
+<body>
+  <img src="/path/to/resource">
+</body>
+```
+
+---
+
+## Menambahkan Interaksi Berupa Tombol
+
+```html
+<body>
+  <button>Tekan untuk Menyumbang</button>
+</body>
+```
+
+---
+
+## Mempercantik tampilan dengan CSS
+
+```css
+<style>
+  selector-name {
+    property: value
+  }
+</style>
+```
+
+---
+
+## Menambah interaksi dengan javascript
+
+```html
+<script>
+  // javascript code here
+</script>
+```
+
+---
+
+## HTTP Protocol
+
+![http diagram](/materi/slide-images/HTTP.png)
