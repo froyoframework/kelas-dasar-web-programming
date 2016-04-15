@@ -2,7 +2,7 @@
 
 ## Pengenalan Pemrograman dan Computational Thinking
 
-### Kursus Coding Froyo Framework
+### Kelas Coding Froyo Framework
 
 ---
 
