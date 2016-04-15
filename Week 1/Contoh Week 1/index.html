@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,500,700' rel='stylesheet' type='text/css'>
+	<style type="text/css">
+		body {
+			font-family: 'Roboto', sans-serif;
+			text-align: center;
+		}
+		h1 {
+			color: #ffffff;
+		}
+		#container {
+			width: 600px;
+			margin:auto;
+			background: #565656;
+			color: #efefef;
+			padding: 20px;
+		}
+		#container img {
+			width: 400px;
+		}
+		button {
+			margin-top: 20px;
+		    background-color: #4CAF50; /* Green */
+			border: none;
+			color: white;
+			padding: 15px 32px;
+			text-align: center;
+			font-size: 16px;
+		}
+	</style>
+	<script type="text/javascript">
+		var thankYouText = "Terima kasih sudah menyumbang. Sumbangan ini akan kami gunakan untuk perawatan pohon objek wisata kampung kami";
+		function donate() {
+			document.getElementById("thankYou").innerHTML = thankYouText;
+		}
+	</script>
+	<title>Judul Halaman</title>
+</head>
+
+<body>
+	<div id="container">
+		<h1>Sebuah Cerita tentang Pohon</h1>
+		<p>Saya ingin bercerita tentang sebuah pohon besar. Pohon ini adalah peninggalan nenek moyang kami. Ia masih berdiri kokoh, meski sudah ratusan tahun berdiri. Ia bisa dibilang sebagai saksi peradaban di daerah ini.</p>
+		<p>Usia pohon ini sudah tua. Meski demikian, ia mampu menghidupi kampung kami. Keunikan pohon ini mampu menarik hati para wisatawan untuk melihat desa kami. Dengan begitu, maka roda ekonomi di daerah terpencil ini, bisa tetap berjalan.</p>
+		<img src="pohon.png"></img>
+		<figcaption>Ini adalah gambar pohon</figcaption>
+		<button id="donation" onclick="donate()">Tekan untuk Menyumbang</button>
+		<p id="thankYou"></p>
+	</div>
+</body>
+
+</html>
