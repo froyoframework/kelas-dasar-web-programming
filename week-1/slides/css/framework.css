@@ -1,0 +1,10 @@
+body { 
+	background-size: 20%; 
+	background-image: url("../img/logo-framework.png"); 
+	background-position: left bottom; 
+	background-repeat: no-repeat; 
+}
+
+.reveal h1 {
+	font-size: 3em;
+}

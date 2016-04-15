@@ -2,7 +2,7 @@
 
 ## Pengenalan Pemrograman dan Computational Thinking
 
-Kursus Coding Froyo Framework
+### Kursus Coding Froyo Framework
 
 ---
 
@@ -56,25 +56,25 @@ Bagaimana membuat sistem pembayaran tol non-tunai?
 
 Uang dalam bentuk kartu
 
-![e-money 1](https://app.box.com/representation/file_version_64000006601/image_2048/1.png)
+![e-money 1](materi/slide-images/compThinking0.png)
 
 --
 
 Kartu mengandung sejumlah uang
 
-![e-money 2](https://app.box.com/representation/file_version_63999915733/image_2048/1.png)
+![e-money 2](materi/slide-images/compThinking1.png)
 
 --
 
 Untuk membayar, kartu dibaca oleh alat tertentu
 
-![e-money 3](https://app.box.com/representation/file_version_63999915073/image_2048/1.png)
+![e-money 3](materi/slide-images/compThinking2.png)
 
 --
 
 Ketika dibaca, saldo dalam kartu diketahui ...
 
-![e-money 4](https://app.box.com/representation/file_version_63999915433/image_2048/1.png)
+![e-money 4](materi/slide-images/compThinking3.png)
 
 --
 
@@ -91,12 +91,12 @@ Latihan
 
 --
 
-Aplikasikan computational thinking untuk memecahkan masalah berikut:
+- Aplikasikan computational thinking untuk memecahkan masalah berikut:
 
-1. Mengurutkan pemain di sebuah klub sepakbola dalam sebuah daftar
-2. Memilih barang di toko online agar barang datang secepat mungkin
+  1. Mengurutkan pemain di sebuah klub sepakbola dalam sebuah daftar
+  2. Memilih barang di toko online agar barang datang secepat mungkin
 
-Gambarkan diagram solusi Anda pada selembar kertas, lalu presentasikan
+- Gambarkan diagram solusi Anda pada selembar kertas, lalu presentasikan
 
 ---
 
@@ -168,7 +168,11 @@ Gambarkan diagram solusi Anda pada selembar kertas, lalu presentasikan
 
 Membuat website yang menampilkan foto dari Instagram
 
----
+--
+
+![Website Project](materi/slide-images/website-project.png)
+
+--
 
 # Project
 
@@ -180,7 +184,7 @@ Membuat website yang menampilkan foto dari Instagram
     + Profil pribadi
     + dsb.
 
----
+--
 
 # Project
 
@@ -189,7 +193,7 @@ Membuat website yang menampilkan foto dari Instagram
 - Desain hanya untuk referensi
 - Di pertemuan terakhir, semua akan menunjukkan project masing-masing
 
----
+--
 
 # Mengapa Dimulai dengan Web
 
@@ -232,9 +236,8 @@ Membuat website yang menampilkan foto dari Instagram
 # Struktur Website: Sitemap
 
 - Menggambarkan dengan jelas, struktur dari sebuah website
-    + halaman-halaman apa saja
-    + bagaimana hubungan antar halaman
-    + membantu kita mndaftar apa saja yang harus ada dalam sebuah website
+    + daftar halaman-halaman
+    + hubungan antar halaman
     + membantu user dalam melakukan navigasi di dalam website
 - Langkah computational thinking pertama kita dalam membuat website
 
@@ -266,7 +269,7 @@ Membuat website yang menampilkan foto dari Instagram
 
 # Alur Website
 
-![alur website](https://app.box.com/representation/file_version_64008021733/image_2048/1.png)
+![alur website](materi/slide-images/Web Page Flow.png)
 
 ---
 
@@ -293,6 +296,8 @@ Membuat website yang menampilkan foto dari Instagram
     + mendefinisikan tampilan visual 
 - JS
     + mengimplementasikan interaksi dinamis di halaman web
+
+---
 
 ![file web](http://blog.teamtreehouse.com/wp-content/uploads/2014/11/progressive-enhancement.png)
 
