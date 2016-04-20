@@ -6,6 +6,44 @@
 
 ---
 
+# Selamat Datang di Framework
+
+--
+
+# Overview Kelas
+
+- Kelas tentang dasar pemrograman
+- Belajar dengan membuat website sederhana
+- 6 pertemuan @ 6 jam
+- Gratis, tanpa syarat
+
+--
+
+# Materi Kelas
+
+- Week 1: Pengenalan Programming
+- Week 2: HTML
+- Week 3: CSS
+- Week 4: Dasar JavaScript
+- Week 5: JavaScript bagian 2 & API Instagram
+- Week 6: JavaScript bagian 3 & upload website ke internet 
+
+--
+
+# Beberapa Peraturan
+
+- Ketik kode, jangan copy paste
+- Datang tepat waktu, kita mulai pukul 10
+- Tidak ada makan siang, tapi banyak sekali tempat makan di sekitar Framework
+- Jangan malu untuk bertanya
+- Selama masa kelas, silakan datang ke Framework
+
+--
+
+# Have fun :D
+
+---
+
 # Apa itu programming?
 
 ---
