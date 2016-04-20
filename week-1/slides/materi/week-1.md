@@ -267,27 +267,6 @@ Membuat website yang menampilkan foto dari Instagram
 
 ---
 
-# Alur Website
-
-![alur website](materi/slide-images/Web Page Flow.png)
-
----
-
-# Alur Website Live
-
-- Seorang user akan mengakses resource tertentu di server yang dapat ditampilkan di halaman web
-- Server kemudian akan menyajikan resource-resource tersebut ke user (klien)
-- Browser di klien akan mengolah file resource-resource tersebut dan menampilkannya untuk dibaca oleh user yang bisa juga berinteraksi dengannya
-
----
-
-# Alur Website Lokal
-
-- Untuk sebuah website lokal, kita cukup membuka saja file HTML di browser kita
-- File-file CSS dan JS yang berkaitan akan diolah juga
-
----
-
 # File Penyusun Halaman Web
 
 - HTML
@@ -417,6 +396,21 @@ Membuat website yang menampilkan foto dari Instagram
 
 ---
 
-## HTTP Protocol
+# Alur Website Lokal
 
-![http diagram](/materi/slide-images/HTTP.png)
+- Untuk sebuah website lokal, kita cukup membuka saja file HTML di browser kita
+- File-file CSS dan JS yang berkaitan akan diolah juga
+
+---
+
+# Alur Website Live
+
+- Seorang user akan mengakses resource tertentu di server yang dapat ditampilkan di halaman web
+- Server kemudian akan menyajikan resource-resource tersebut ke user (klien)
+- Browser di klien akan mengolah file resource-resource tersebut dan menampilkannya untuk dibaca oleh user yang bisa juga berinteraksi dengannya
+
+--
+
+# HTTP Protocol
+
+![alur website](materi/slide-images/HTTP.png)
