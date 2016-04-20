@@ -84,6 +84,34 @@ Contoh:
 
 ---
 
+# Struktur File HTML
+
+- Sebuah File HTML dinyatakan dengan tag <html>, karena ada *markup language* lain seperti XML
+- Biasanya, file dibagi menjadi 2 bagian, <head> dan <body>
+- <head> berisi metadata dari file HTML, bisa berisi:
+    + judul halaman <title>
+    + style CSS <style>
+    + script JS <script>
+    + dll.
+- <body> mendefinisikan isi sebenarnya dari dokumen, di sinilah semua elemen dalam halaman didefinisikan
+
+---
+
+# Struktur File HTML
+
+```
+<html>
+<head>
+    <title>Judul Halaman</title>
+</head>
+
+<body>
+    Isi halaman
+</body>
+
+</html>
+```
+
 # Heading dan Paragraf
 
 - Menyediakan tingkat heading dari 1-6
@@ -125,17 +153,76 @@ Contoh:
 
 # List
 
+- Bisa berupa list berurut <ol> atau tak berurut <ul>
+- Setiap elemen dalam list menggunakan tag <li>
+
+```
+<ol>
+    <li>elemen no 1</li>
+    <li>elemen no 2</li>
+    <li>elemen no 3</li>
+</ol>
+<ul>
+    <li>elemen tak berurut</li>
+    <li>elemen tak berurut</li>
+    <li>elemen tak berurut</li>
+</ul>
+```
+
 ---
 
 # Form
+
+- Elemen yang digunakan untuk mengambil input dari user, baik berupa text, pilihan, berikut tombol submit
+
+```
+<form>
+    Nama Lengkap: <input type="text" name="fullName">
+    Jenis Kelamin:  <select name="gender">
+                        <option value="pria">Pria</option>
+                        <option value="wanita">Wanita</option>
+                    </select>
+    <input type="submit" value="Submit">
+</form>
+```
 
 ---
 
 # Tabel
 
+- Sesuai namanya, bisa digunakan untuk membuat tabel
+- Bisa juga digunakan untuk membuat layout, meski sekarang tidak dianjurkan
+- Tagnya adalah <table>, setiap baris dibuat dengan <tr> dan kolom dengan <td>
+
+```
+<table>
+    <tr>
+        <td>Nama Depan</td>
+        <td>Nama Belakang</td>
+        <td>Gol</td>
+    </tr>
+    <tr>
+        <td>Lionel</td>
+        <td>Messi</td>
+        <td>500</td>
+    </tr>
+</table>
+
+```
+
 ---
 
 # Membagi Halaman ke dalam Bagian
+
+- Sebuah halaman bisa dibagi ke dalam beberapa bagian, untuk kepentingan layout dan pengelompokan konten
+- Kita bisa menggunakan tag <div>
+- Selain itu, ada juga tag lain yang memiliki arti khusus sesuai penggunannya:
+    + <nav> untuk elemen navigasi
+    + <article> untuk keseluruhan artikel
+    + <section> untuk sebuah bagian dalam artikel
+    + <figure> untuk gambar dalam artikel
+- Biasanya, <div> digunakan untuk menyatakan sebuah bagian halaman yang memiliki *style* CSS tersendiri
+- Tag lain bisa digunakan untuk membagi halaman secara lebih semantik
 
 ---
 
