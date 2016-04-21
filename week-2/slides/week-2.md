@@ -112,6 +112,8 @@ Contoh:
 </html>
 ```
 
+---
+
 # Heading dan Paragraf
 
 - Menyediakan tingkat heading dari 1-6
