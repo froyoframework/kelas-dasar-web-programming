@@ -88,12 +88,12 @@ Contoh:
 
 - Sebuah File HTML dinyatakan dengan tag <html>, karena ada *markup language* lain seperti XML
 - Biasanya, file dibagi menjadi 2 bagian, <head> dan <body>
-- <head> berisi metadata dari file HTML, bisa berisi:
-    + judul halaman <title>
-    + style CSS <style>
-    + script JS <script>
+- `<head>` berisi metadata dari file HTML, bisa berisi:
+    + judul halaman `<title>`
+    + style CSS `<style>`
+    + script JS `<script>`
     + dll.
-- <body> mendefinisikan isi sebenarnya dari dokumen, di sinilah semua elemen dalam halaman didefinisikan
+- `<body>` mendefinisikan isi sebenarnya dari dokumen, di sinilah semua elemen dalam halaman didefinisikan
 
 ---
 
