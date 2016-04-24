@@ -1,0 +1,36 @@
+#gallery-container img {
+	width: 300px;
+}
+
+.image-container {
+	text-align: center;
+}
+
+#gallery-container {
+	width:1000px;
+	margin: auto;
+}
+
+nav ul li {
+	display: inline-block;
+}
+
+nav ul {
+	margin-left: -40px;
+}
+
+header {
+	margin: auto;
+	width: 900px;
+	background-image: url('../img/header-bg.png'); 
+}
+
+#header-container {
+	width: 300px;
+	margin: auto;
+	text-align: center;
+	height: 150px;
+	margin-bottom: 20px;
+	padding: 30px;
+}
+

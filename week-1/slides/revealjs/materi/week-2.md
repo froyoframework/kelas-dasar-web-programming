@@ -148,7 +148,7 @@ Contoh:
 
 # Gambar
 
-- tagnya adalah <img>
+- tagnya adalah `<img>`
 - atributnya adalah alamat gambar tersebut, caption dan deskripsi gambar (opsional)
 
 ```
@@ -159,8 +159,8 @@ Contoh:
 
 # List
 
-- Bisa berupa list berurut <ol> atau tak berurut <ul>
-- Setiap elemen dalam list menggunakan tag <li>
+- Bisa berupa list berurut `<ol>` atau tak berurut `<ul>`
+- Setiap elemen dalam list menggunakan tag `<li>`
 
 ```
 <ol>
@@ -221,13 +221,18 @@ Contoh:
 # Membagi Halaman ke dalam Bagian
 
 - Sebuah halaman bisa dibagi ke dalam beberapa bagian, untuk kepentingan layout dan pengelompokan konten
-- Kita bisa menggunakan tag <div>
+- Kita bisa menggunakan tag `<div>`
 - Selain itu, ada juga tag lain yang memiliki arti khusus sesuai penggunannya:
-    + <nav> untuk elemen navigasi
-    + <article> untuk keseluruhan artikel
-    + <section> untuk sebuah bagian dalam artikel
-    + <figure> untuk gambar dalam artikel
-- Biasanya, <div> digunakan untuk menyatakan sebuah bagian halaman yang memiliki *style* CSS tersendiri
+    + `<nav>` untuk elemen navigasi
+    + `<article>` untuk keseluruhan artikel
+    + `<section>` untuk sebuah bagian dalam artikel
+    + `<figure>` untuk gambar dalam artikel
+
+---
+
+# Membagi Halaman ke dalam Bagian
+
+- Biasanya, `<div>` digunakan untuk menyatakan sebuah bagian halaman yang memiliki *style* CSS tersendiri
 - Tag lain bisa digunakan untuk membagi halaman secara lebih semantik
 
 ---
@@ -326,10 +331,12 @@ Contoh:
 
 ```
 <section>
-<div>
-  <img src="">
-  <p></p>
-</div>
+    <div>
+        <div>
+          <img src="">
+          <p></p>
+        </div>
+    </div
 ```
 
 ---
@@ -349,10 +356,12 @@ Contoh:
 
 # Membuat Copyright di Footer
 
+```
 <div class="copyright-container">
   <p>A Site by Loren Ipsum</p>
   <p>Copyright&copy;2016</p>
 </div>
+```
 
 ---
 
@@ -451,7 +460,7 @@ h1 {
 h1 {
     font-size: 20px;
 }
-h1 .small{
+h1.small{
     font-size: 15px;
 }
 
@@ -468,7 +477,7 @@ h1 .small{
 h1 {
     font-size: 20px;
 }
-h1 #nama{
+h1#nama{
     font-size: 15px;
 }
 
@@ -556,11 +565,12 @@ h1 {
 ---
 
 ```
-div #nav-menu {
+div#nav-menu {
     width: 300px;
+    float: left;
 }
 
-div #main-content {
+div#main-content {
     float: left;
     width: 500px;
 }
@@ -568,9 +578,26 @@ div #main-content {
 
 ---
 
-# Penggunaan CSS: Margin dan Padding
+# Penggunaan CSS: float
 
-- Margin dan Padding adalah 2 aturan CSS yang bisa kita gunakan untuk mengatur posisi sebuah elemen
+- Secara default, elemen HTML akan ditampilkan berurut dari atas ke bawah
+- Dengan menggunakan properti CSS `float`, maka sebuah elemen bisa diatur untuk tidak ditampilkan sesuai urutan tersebut
+- Misal, dengan `float: left` maka sebuah elemen akan ditampilkan di kiri elemen induknya
+
+---
+
+# Penggunaan CSS: display
+
+- Sebuah elemen, bisa ditampilkan secara `block`, `inline` atau `inline-block`, ini adalah salah satu dari parameter properti `display` milik CSS
+- `block ` berarti sebuah elemen HTML akan ditampilkan sesuai ukurannya, dan mendorong elemen sesudahnya untuk ditampilkan di bawahnya, contoh: `<img>`
+- `inline` berarti sebuah elemen HTML akan memakan seluruh lebar dari halaman atau elemen induknya, contoh: `<p>`
+- `inline-block` berarti sebuah elemen HTML akan ditampilkan seperti `block`, namun elemen sesudahnya akan ditampilkan sebaris dengannya
+
+---
+
+# Penggunaan CSS: margin dan padding
+
+- `margin` dan `padding` adalah 2 aturan CSS yang bisa kita gunakan untuk mengatur posisi sebuah elemen
 - Sejatinya, keduanya bekerja dengan mengatur jarak antara sebuah elemen HTML, dengan elemen di dekatnya
 - Jaraknya bisa diatur untuk posisi atas, bawah, kiri atau kanan
 - `margin` digunakan untuk mengatur jarak antara 1 elemen dengan elemen sesudah dan sebelumnya
@@ -748,3 +775,18 @@ p.caption {
     margin-top: 10px;
 }
 ```
+
+---
+
+# PR
+
+- Silakan selesaikan styling CSS untuk `<header>` dan `<footer>` dari halaman depan website project kita
+
+*Catatan*
+- Semua materi pendukung ada di Github, di direktori `week-2/project-example`, termasuk gambar untuk background header dan icon social media untuk footer
+- Referensi desain bisa dilihat di direktori `project-resources`
+- Progres pengerjaan web di kelas, bisa dilihat di file `week-2/project-example/index-week-2.html`
+
+---
+
+# Sampai jumpa minggu depan :)

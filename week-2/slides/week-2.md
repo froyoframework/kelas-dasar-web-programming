@@ -227,6 +227,11 @@ Contoh:
     + <article> untuk keseluruhan artikel
     + <section> untuk sebuah bagian dalam artikel
     + <figure> untuk gambar dalam artikel
+
+---
+
+# Membagi Halaman ke dalam Bagian
+
 - Biasanya, <div> digunakan untuk menyatakan sebuah bagian halaman yang memiliki *style* CSS tersendiri
 - Tag lain bisa digunakan untuk membagi halaman secara lebih semantik
 
