@@ -202,11 +202,89 @@ p {
 
 ---
 
-# Selector Khusus
+# Selector Tambahan
+
+- Selain memilih selector dengan menelusuri pohon elemen HTML, atau memilih elemen/id/class tertentu, CSS juga memiliki fitur untuk memilih berdasarkan pola tertentu
+- Misal:
+    - memilih anak pertama dari sebuah elemen, 
+    - menambahkan konten setelah sebuah elemen
+    - memilih elemen yang sedang ditunjuk mouse
+- Kita akan mengenalkan beberapa selector tambahan yang lazim digunakan
+
+---
+
+# Selector Tambahan: `before` dan `after`
+
+- Kedua selector ini digunakan untuk menambahkan sesuatu sebelum atau sesudah sebuah elemen
+- Contoh:
+
+```
+p:after {
+    content: " - ini cuma paragraf dalam div";
+}
+```
+
+---
+
+# Selector Tambahan: `child`
+
+- Dengan ini, kita bisa memilih anak dari sebuah elemen, baik `first-child`, `last-child` atau `nth-child(n)`
+- Contoh:
+
+```
+p:first-child {
+    color: #0022dd;
+}
+
+<div>
+    <p>Halo, ini adalah isi pertama dari div ini</p>
+    <p>Halo, ini adalah isi kedua dari div ini</p>
+    <p>Halo, ini adalah isi ketiga dari div ini</p>
+</div>
+```
+
+- Hanya isi pertama yang warna font-nya berubah
+
+---
+
+# Selector Tambahan: `:active` dan `:hover`
+
+- Dengan ini, kita bisa mengaktifkan properti CSS tertentu untuk sebuah elemen yang sedang ditunjuk mouse (`:hover`) atau yang sedang aktif (`:active`)
+- Contoh:
+
+```
+a:active {
+    color: #aa0045;
+}
+
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+```
+
+- Apabila kita sedang berada di halaman home, dan kita mengklik link ke halaman About, maka halaman akan berpindah dan link tersebut menjadi berwarna merah
 
 ---
 
 # Transitions
+
+- Transition digunakan untuk menganimasikan perubahan satu atau beberapa properti CSS
+- Ini adalah cara dasar untuk melakukan animasi hanya menggunakan CSS
+- Dalam transition, kita pilih properti yang ingin dianimasikan dan berapa lama animasi berjalan
+- Dianjurkan penggunaannya hanya dalam jumlah kecil dan tidak kompleks, karena cukup berat
+
+---
+
+# Transitions: Contoh
+
+- Contoh berikut akan menganimasikan perubahan warna background dari sebuah div, saat ia ditunjuk oleh mouse (hover)
+- Perubahan berlangsung selama 2 detik
+
+```
+#container:hover {
+    background-color: #dedede;
+    transition: background-color 2s;
+}
+```
 
 ---
 
@@ -256,9 +334,156 @@ xl >= 1280 px
 
 # Flexbox Model
 
+- Flexbox (flexible box) adalah sebuah model layout di CSS
+- Ia menyediakan sistem pengaturan elemen di sebuah halaman di mana elemen-elemen ini akan diatur posisinya, mengikuti ukuran layarnya
+- Ia menyediakan perbaikan dari model box. Selain itu, ia tidak menggunakan float
+
+--- 
+
+# Konsep Dasar Flexbox
+
+- Konsep dasar terbesarnya adalah kemampuannya untuk mengubah tinggi dan/atau lebar semua elemen-elemennya
+- Sebuah kontainer flex akan mengubah ukurannya untuk mengisi ruang kosong atau memperkecilnya untuk mencegah overflow
+
+---
+
+# Konsep Dasar Flexbox
+
+- Algoritma flexbox tidak memperdulikan arah, berbeda dengan box layout yang bisa jadi horizontal (inline) atau vertikal (box)
+- Box kurang cocok untuk perangkat dengan ukuran berbeda, orientasi berubah, dan seterusnya
+- Flexbox cocok untuk diaplikasikan untuk komponen sebuah aplikasi dan layout dalam skala kecil
+
+---
+
+# Istilah dalam Flexbox
+
+![istilah-dalam-flexbox](https://mdn.mozillademos.org/files/3739/flex_terms.png)
+
+---
+
+# Istilah dalam Flexbox
+
+- Flex container: elemen induk di mana flex item berada. Ia didefiniskan dengan `flex` atau `inline-flex` sebagai nilai dari properti `display`
+- Flex item: setiap anak dari sebuah flex container akan menjadi flex item. 
+- Axes: setiap layout flexbox mengikuti 2 sumbu, **main axis** adalah sumbu searah dengan arah para item disusun, **cross axis** adalah sumbu yang tegak lurus dengan **main axis**
+    + `flex-direction` menentukan **main axis**
+    + `align-items` menentukan bagaimana flex items disusun sepanjang cross axis
+
+---
+
+# Istilah dalam Flexbox
+
+- **main start/main end** dan **cross start/cross end** menetapkan titik awal dan titik akhir dari alur posisi flex item. Ini ditetapkan dalam `writing-mode`
+- Ukuran dari sebuah flexbox ditentukan oleh **main size** dan **cross size**
+
+--- 
+
+# Mengaktifkan Flexbox
+
+- Untuk mengaktifkan flexbox, cukup gunakan properti CSS ini di div yang diinginkan sebagai kontainer sebuah flexbox
+
+```
+.flex-container {
+    display: flex;
+}
+```
+
+---
+
+# Contoh Kasus Flexbox: Menyusun Item Secara Horizontal
+
+```
+
+<style> 
+.flex-container {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+}
+
+.flex-item {
+    margin: 10px;
+}
+</style>
+
+<div class="flex-container">
+  <div class="flex-item">flex item 1</div>
+  <div class="flex-item">flex item 2</div>
+  <div class="flex-item">flex item 3</div> 
+</div>
+
+```
+
+---
+
+# Contoh Kasus Flexbox: Menyusun Item Secara Vertikal
+
+```
+
+<style> 
+.flex-container {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+}
+
+.flex-item {
+    margin: 10px;
+}
+</style>
+
+<div class="flex-container">
+  <div class="flex-item">flex item 1</div>
+  <div class="flex-item">flex item 2</div>
+  <div class="flex-item">flex item 3</div> 
+</div>
+
+```
+
+---
+
+# Contoh Kasus Flexbox: Menempatkan Elemen di Tengah
+
+```
+.flex-container{
+    display: -webkit-flex;
+   display: flex;
+   -webkit-flex-direction: column; /* bisa row atau column */
+   flex-direction: column; /* bisa row atau column */
+   -webkit-align-items: center;
+   align-items: center;
+   -webkit-justify-content: center;
+   justify-content: center;
+    background-color: grey;
+    height: 500px;
+}
+```
+
+---
+
+# Contoh Kasus Flexbox: Mengatur Ukuran Flex Item
+
+```
+.bigitem {
+   /* elemen ini ukurannya menjadi 2 kali elemen yang lebih kecil */
+   -webkit-flex: 2 0 0; 
+   flex: 2 0 0; 
+}
+.smallitem {
+   -webkit-flex: 1 0 0;
+   flex: 1 0 0;
+}
+```
+
 ---
 
 # Praktek
+
+- Aplikasikan HTML dan CSS untuk halaman About dan Contact
+- Silakan bekerja dalam tim, masing-masing tim terdiri dari 2 orang
+- Font yang digunakan dalam referensi desain bisa diganti sesuai kebutuhan
 
 ---
 
