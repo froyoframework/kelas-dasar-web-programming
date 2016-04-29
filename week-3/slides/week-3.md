@@ -212,6 +212,46 @@ p {
 
 # Responsive Design dengan PureCSS
 
+```
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+```
+
+--
+
+## Masukkan Grid System
+
+```
+<!--[if lte IE 8]>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-old-ie-min.css">
+<![endif]-->
+<!--[if gt IE 8]><!-->
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
+<!--<![endif]-->
+```
+
+--
+
+## Grid System di PureCSS 
+
+```
+<div class="pure_g">
+  <div class="pure-u-1-3"></div>
+  <div class="pure-u-1-3"></div>
+  <div class="pure-u-1-3"></div>
+</div>
+```
+--
+
+## Mengenal Media Queries
+
+```
+sm >= 568 px
+md >= 768 px
+lg >= 1024 px
+xl >= 1280 px
+```
+
 ---
 
 # Flexbox Model
