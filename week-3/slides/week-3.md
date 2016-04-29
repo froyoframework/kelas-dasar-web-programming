@@ -489,8 +489,16 @@ xl >= 1280 px
 
 # Referensi Desain Halaman About
 
+Cek di direktori
+
+`project-resources/Mockup Website - About.png`
+
 ---
 
 # Referensi Desain Halaman Contact
+
+Cek di direktori
+
+`project-resources/Mockup Website - Contact.png`
 
 ---
