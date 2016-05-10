@@ -1,14 +1,6 @@
-#gallery-container img {
-	width: 300px;
-}
-
 .image-container {
 	text-align: center;
-}
-
-#gallery-container {
-	width:1000px;
-	margin: auto;
+  padding: 5px;
 }
 
 nav ul li {
@@ -21,16 +13,26 @@ nav ul {
 
 header {
 	margin: auto;
-	width: 900px;
-	background-image: url('../img/header-bg.png'); 
+	background: url('../img/header-bg.png') center center; 
 }
 
 #header-container {
-	width: 300px;
-	margin: auto;
 	text-align: center;
 	height: 150px;
-	margin-bottom: 20px;
-	padding: 30px;
+	margin-bottom: 30px;
 }
 
+
+@media screen and (min-width: 35.5em) {
+  /* small */
+  .caption {
+    font-size: 2em;
+  }
+}
+
+@media screen and (min-width: 48em) {
+  /* tablet */
+  .caption {
+    color: red;
+  }
+}

@@ -211,14 +211,14 @@ p {
   - memilih elemen yang sedang ditunjuk mouse
   - Kita akan mengenalkan beberapa selector tambahan yang lazim digunakan
 
-  ---
+---
 
 # Selector Tambahan: `before` dan `after`
 
-  - Kedua selector ini digunakan untuk menambahkan sesuatu sebelum atau sesudah sebuah elemen
-  - Contoh:
+- Kedua selector ini digunakan untuk menambahkan sesuatu sebelum atau sesudah sebuah elemen
+- Contoh:
 
-  ```
+```
   p:after {
 content: " - ini cuma paragraf dalam div";
   }
