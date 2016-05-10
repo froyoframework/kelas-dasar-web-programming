@@ -22,3 +22,13 @@ Materi yang diajarkan di kelas web programming untuk pemula.
         4. Overview CSS
         5. Framework CSS
         6. Membuat Grid untuk layout
+
+## Week 3: CSS Lanjutan
+
+    1. CSS Lanjutan:
+        - Logika CSS
+        - Selector Tambahan
+        - Font
+        - Transition
+    2. Responsive Design
+    3. Flexbox Model (Bonus Material)

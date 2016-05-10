@@ -72,3 +72,19 @@ p.caption {
 .social-media-container ul li img {
   max-width: 50px;
 }
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  #gallery-container {
+    width: 100%;
+  }
+
+  #gallery-container img {
+    width: 70%;
+  }
+
+  p.caption {
+    max-width: 70%;
+  }
+}

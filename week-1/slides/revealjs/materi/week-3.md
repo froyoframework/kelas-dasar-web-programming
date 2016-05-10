@@ -96,16 +96,16 @@
 # Logika CSS: Display
 
 - `inline`:
-+ Semua elemen ditampilkan bersebelahan, dalam 1 baris
-+ Tidak memperdulikan margin dan padding di sisi atas dan bawah
-+ Tidak bisa mengatur properti `width` dan `height`
+  + Semua elemen ditampilkan bersebelahan, dalam 1 baris
+  + Tidak memperdulikan margin dan padding di sisi atas dan bawah
+  + Tidak bisa mengatur properti `width` dan `height`
 - `block`
-+ Semua elemen ditampilkan vertikal, dari atas ke bawah, karena memaksa untuk mengganti baris
-+ Semua margin dan padding akan diperhitungkan
+  + Semua elemen ditampilkan vertikal, dari atas ke bawah, karena memaksa untuk mengganti baris
+  + Semua margin dan padding akan diperhitungkan
 - `inline-block`
-+ Memungkinkan semua elemen untuk bersebelahan
-+ Memperdulikan margin dan padding di sisi atas dan bawah
-+ Bisa mengatur properti `width` dan `height`
+  + Memungkinkan semua elemen untuk bersebelahan
+  + Memperdulikan margin dan padding di sisi atas dan bawah
+  + Bisa mengatur properti `width` dan `height`
 
 ---
 
@@ -250,12 +250,12 @@ color: #0022dd;
 # Selector Tambahan: `:active` dan `:hover`
 
 - Dengan ini, kita bisa mengaktifkan properti CSS tertentu untuk sebuah elemen yang sedang ditunjuk mouse (`:hover`) atau yang sedang aktif (`:active`)
-  - Contoh:
+- Contoh:
 
-  ```
-  a:active {
+```
+a:active {
 color: #aa0045;
-  }
+}
 
 <a href="about.html">About</a>
 <a href="contact.html">Contact</a>
@@ -329,17 +329,18 @@ sm >= 568 px
 md >= 768 px
 lg >= 1024 px
 xl >= 1280 px
+
 ```
 
 ---
 
-# Flexbox Model
+# Flexbox Model (Materi Bonus)
 
 - Flexbox (flexible box) adalah sebuah model layout di CSS
 - Ia menyediakan sistem pengaturan elemen di sebuah halaman di mana elemen-elemen ini akan diatur posisinya, mengikuti ukuran layarnya
 - Ia menyediakan perbaikan dari model box. Selain itu, ia tidak menggunakan float
 
---- 
+---
 
 # Konsep Dasar Flexbox
 
@@ -377,7 +378,7 @@ xl >= 1280 px
 - **main start/main end** dan **cross start/cross end** menetapkan titik awal dan titik akhir dari alur posisi flex item. Ini ditetapkan dalam `writing-mode`
 - Ukuran dari sebuah flexbox ditentukan oleh **main size** dan **cross size**
 
---- 
+---
 
 ## Mengaktifkan Flexbox
 
