@@ -4,18 +4,89 @@
 
 # Overview JavaScript
 
+- Bahasa pemrograman client-side, satu-satunya bahasa yang dimengerti browser
+- HTML dan CSS tidak disebut bahasa pemrograman, karena tidak memiliki kemampuan mengolah logika, berbeda dengan JS
+- Penulisan JS di dalam HTML, mirip dengan CSS
+  + bisa dibuat eksternal
+  + bisa ditulis di dalam file HTML
+
 ---
 
-# Console
+# Overview JavaScript
 
-Tempat untuk mencoba-coba kode JavaScript.
+- Perkembangannya pesat sekali beberapa tahun belakangan
+- Ada beragam library yang keluar setiap hari
+- Penggunaannya tidak terbatas hanya untuk website, bisa juga untuk membuat animasi, game, pemrograman robot/hardware, pemrograman server, dsb
+- Dengan mempelajari JavaScript, akan terbuka juga arah untuk pemrograman yang lain
+
+---
+
+# JavaScript dan jQuery
+
+- Beberapa mungkin pernah mendengar jQuery
+- Library JavaScript yang memungkinkan penulisan JavaScript dengan lebih singkat, berguna ketika kita ingin membuat sesuatu lebih cepat
+- Karena kelas ini mengajarkan dasar pemrograman, kita tidak akan menyentuh jQuery, hanya fokus pada JavaScript dasar (tanpa library)
+
+---
+
+# Menggunakan JavaScript
+
+- Dengan Console
+- Menulis langsung di dalam file HTML
+- Menulis file baru dan direferensikan di dalam HTML
 
 ---
 
 # Hello World JS
 
+- Menampilkan pesan "Hello World"
+- Hasilnya bisa dilihat di dalam Console
+
 ```
 console.log("Hello, World!");
+```
+
+- 1 baris perintah disebut pernyataan dan ditutup dengan titik koma (;)
+- Dalam program tadi, kita memanggil fungsi `console.log()` bawaan JS dan menampilkan kalimat ("Hello, World")
+- Karena "Hello, World" berupa kalimat, maka ia perlu diletakkan di dalam tanda kutip
+
+---
+
+# Menggunakan JavaScript: Console
+
+- Tempat untuk mencoba-coba kode JavaScript.
+- Kita akan menulis langsung di dalam console dan melihat hasilnya secara instan
+- Console bisa ditampilkan sebagaimana melakukan inspect di dalam Chrome
+
+---
+
+# Menggunakan JavaScript: di dalam file HTML
+
+- Script bisa ditaro di <head> atau di ujung <body>
+
+```
+<head>
+  <script type="text/javascript">
+    console.log("Hello, World");
+  </script>
+</head>
+```
+
+---
+
+# Menggunakan JavaScript: di luar file HTML
+
+- misal file JS disimpan sebagai `scriptSaya.js`
+
+```
+//scriptSaya.js
+console.log("Hello, World");
+
+<!-- latihanJS.HTML -->
+<head>
+  <script type="text/javascript" src="scriptSaya.js"></script>
+</head>
+
 ```
 
 ---
@@ -35,11 +106,16 @@ console.log("Hello, World!");
 
 # Variabel
 
-Variabel adalah tempat untuk menyimpan data sementara di memori komputer.
+- Variabel adalah tempat untuk menyimpan data sementara di memori komputer
+- Sesuai namanya, isi variabel ini bisa berubah-ubah
+- Yang kita panggil adalah nama tempatnya, bukan isinya
 
 --
 
 ## Deklarasi dan Penggunaan Variabel
+
+- Kita punya variabel a, kita panggil namanya, lalu isinya yang digunakan dalam operasi
+- Ketika kita ubah isinya, maka otomatis hasil dari variabel `result` akan berubah juga jika perhitungan kita ulang
 
 ```
 var a = 2;
@@ -49,9 +125,21 @@ var result = (a + b) - a;
 console.log(result);
 ```
 
+--
+
+## Penamaan Variabel
+
+- Variabel bisa dinamakan bebas, aturannya hanya:
+  + tidak dimulai dengan angka
+  + tidak menggunakan tanda baca selain _ (underscore)
+- Berikan nama variabel sejelas mungkin, sehingga kalau dibaca orang lain, sudah cukup jelas
+
 ---
 
 # Comparison Operator
+
+- Operasi ini membandingkan 2 data
+- Hasilnya hanya 2 jenis logika kebenaran: true atau false
 
 ```
 1 === 1; // true
@@ -66,6 +154,9 @@ console.log(result);
 
 # Logical Operator
 
+- Operasi ini membandingkan 2 jenis logika kebenaran
+- Angka di luar 0, selalu dianggap true
+
 ```
 true && false // AND. always return false, unless both of operand are true
 true || false // OR. alwyas return true, unless both of operand are false
@@ -76,7 +167,8 @@ true || false // OR. alwyas return true, unless both of operand are false
 
 # Kondisi
 
-Memberikan pilihan untuk jalannya program.
+- Memberikan pilihan untuk jalannya program
+- Kita bisa menggunakan operasi logika atau perbandingan untuk menentukan jalannya program
 
 --
 
@@ -131,7 +223,8 @@ switch(a) {
 
 # Perulangan (Loop)
 
-Membuat alur program menjadi berulang.
+- Membuat alur program menjadi berulang
+- Kita bisa mengulang sebuah pernyataan berkali-kali, tanpa perlu menulisnya berulang
 
 --
 
@@ -187,7 +280,9 @@ for(var i = 0; i < 100; i++) {
 
 # Function
 
-Satu blok kode yang memiliki tugas tertentu.
+- Satu blok kode yang memiliki tugas tertentu
+- Saru blok ditandai dengan kurung kurawal {}
+- Sebuah cara untuk membuat program menjadi modular (tersusun atas modul-modul lebih kecil)
 
 --
 
@@ -236,4 +331,52 @@ function fizzBuzz(initial, condition) {
 
 // chaining function
 console.log(fizzBuzz(5, 150));
+```
+
+---
+
+# Mengakses Isi HTML dengan JS
+
+- Kita bisa mengakses isi sebuah elemen HTML dengan menggunakan JS
+- Ini adalah dasar dari mengakses DOM (Document Object Model) menggunakan JS
+- Contoh: mengakses isi dari `div` dengan `id="angka"`
+
+```
+// JS
+// x bernilai 60
+var x = document.getElementById("angka-satu").innerHTML;
+
+<!-- HTML -->
+<div id="angka">
+  60
+</div>
+```
+
+---
+
+# Mengubah Isi HTML dengan JS
+
+- Selanjutnya karena kita sudah bisa mengakses isi dari `div` tersebut, maka kita juga bisa mengubah isinya
+
+```
+var y = 70;
+document.getElementById("angka-satu").innerHTML = y;
+
+```
+
+---
+
+# Memanggil Fungsi JS dengan Button
+
+- Apabila kita sudah menggunakan fungsi, maka fungsi tersebut bisa dipanggil menggunakan button di dalam HTML
+- Dengan demikian, maka interaktivitas sederhana sudah terjadi di dalam web page kita
+
+```
+// JS
+function addNumbers() {
+  var result = x + y;
+}
+
+<!-- HTML -->
+<button onclick="addNumbers()">Add Numbers</button>
 ```
