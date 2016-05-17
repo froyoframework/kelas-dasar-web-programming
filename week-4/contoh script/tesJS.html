@@ -1,0 +1,40 @@
+<html>
+<head>
+</head>
+<body>
+	<span id="jam">10 </span>
+	<div id="ucapan">  </div>
+	<button onclick="salam()">Salam</button>
+	<button onclick="acak()">Ganti Jam</button>
+	<script type="text/javascript">
+		// jam adalah variabel global
+		var jam = document.getElementById("jam").innerHTML;
+		var ucapan;
+
+		function salam() {
+			if (jam > 6 && jam < 11) {
+				ucapan = "selamat pagi";
+			} else if (jam >= 12 && jam <= 15) {
+				ucapan = "selamat siang";
+			} else if (jam >= 16 && jam <= 18) {
+				ucapan = "selamat sore";
+			} else if (jam >= 19 && jam <= 24) {
+				ucapan = "selamat malam";
+			} else {
+				ucapan = "jam rusak";
+			}
+			document.getElementById("ucapan").innerHTML = ucapan;
+
+			// contoh adalah variabel lokal
+			var contoh = 5;
+			console.log(contoh);
+		}
+
+		function acak() {
+			jam = Math.floor(Math.random() * 24); 
+			document.getElementById("jam").innerHTML = jam;
+			salam();
+		}	
+	</script>
+</body>
+</html>
