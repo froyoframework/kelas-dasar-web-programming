@@ -81,6 +81,20 @@ console.log(beberapaNama);
 
 ---
 
+# Mengakses Elemen Array dengan Loop For
+
+- Menggunakan loop for, kita bisa dengan mudah mengakses elemen array tanpa perlu memanggilnya satu persatu
+- Kita gunakan 1 variabel untuk menunjuk elemen array
+
+```
+var namaHari = ["Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu", "Minggu"];
+for (var i = 0; i < 10; i++) {
+    console.log(namaHari[i]);
+}
+```
+
+---
+
 # Property Array
 
 - Untuk menguji ukuran array (berapa banyak elemen di dalam array), kita bisa menggunakan `length()`
@@ -111,6 +125,111 @@ beberapaNama.push ("Tania")
 ---
 
 # Object
+
+- Dalam pemrograman, object didefinisikan sebagai sebuah entitas yang memiliki tipe, property dan method (fungsi) tersendiri
+- Sebagai permisalan: jika manusia adalah object, maka ia memiliki:
+    - tipe: manusia, 
+    - property: mata, tangan, kaki, dsb.
+    - method: jalan, berenang, lompat, dsb.
+- Bandingkan dengan kura-kura, jika ia adalah object maka:
+    + tipe: reptil
+    + property: tempurung, kepala, kaki, dsb.
+    + method: berenang, berjalan, sembunyi, dsb.
+
+---
+
+# Object dan Property
+
+- Dalam JS, object bisa memiliki property berupa variabel, serta function (method)
+- Property sebuah object bisa diakses seperti ini:
+
+```
+objectName.propertyName;
+```
+
+---
+
+# Membuat Object dan Property
+
+- Contoh membuat Object dan mengakses propertyinya
+
+```
+var kopiku = new Object();
+kopiku.jenis = "Arabica";
+kopiku.ukuran = "kecil";
+kopiku.harga = "12000";
+```
+- Cara berikut juga valid
+```
+kopiku["jenis"] = "Arabica";
+kopiku["ukuran"] = "kecil";
+kopiku["harga"] = "12000";
+```
+
+---
+
+# Membuat Object dengan Initializer
+
+- Cara berikut, kita bisa membuat object dengan object initializer, fitur bawaan JS untuk membuat object yang sintaksnya mirip dengan C++
+
+```
+var obj = {
+    property_1: value_1,
+    property_2: value_2,
+    //...,
+    property_n: value_n
+};
+```
+- Contoh:
+
+```
+var kopiku = {
+    jenis: "Arabica",
+    ukuran: "kecil",
+    harga: 12000
+};
+```
+
+---
+
+# Mendefinisikan Property
+
+- Apabila sebuah object telah dibuat, maka kita bisa mengakses dan mendefinisikan propertynya, ataupun membuat property baru
+
+```
+kopiku.jenis = "Robusta" //mengganti jenis kopiku
+kopiku.suhu = "panas" //menambah property baru
+```
+
+---
+
+# Mendefinisikan Method
+
+- Pada dasarnya, membuat method bisa diartikan membuat fungsi yang kita definisikan sebagai milik sebuah object
+- Nantinya, method ini akan dipanggil beserta dengan nama object pemiliknya
+
+```
+var myObj = {
+  myMethod: function(params) {
+    // isi method
+  }
+};
+```
+
+---
+
+# Mendefinisikan Method
+
+- Contoh:
+
+```
+var kopiku = {
+    // ditambahkan dari property sebelumnya
+    ubahHarga: function(hargaBaru) {
+        this.harga = hargaBaru;
+    }
+}
+```
 
 ---
 
