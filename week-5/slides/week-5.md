@@ -235,13 +235,30 @@ var kopiku = {
 
 # API
 
-Application Programming Interface adalah antar muka (UI) yang disediakan oleh penyedia layanan agar aplikasi pihak ketiga dapat berinteraksi dengan data di dalamnya.
+- Application Programming Interface adalah antar muka (UI) yang disediakan oleh penyedia layanan agar aplikasi pihak ketiga dapat berinteraksi dengan data di dalamnya
+- Dengan demikian, maka kita bisa mengakses bagian dalam dari sebuah program, melalui program lain
+- Di kasus kita, kita akan menggunakan script buatan kita, untuk mendapatkan gambar dari Instagram lalu ditampilkan di web page kita
 
 ---
 
 # Menghubungkan dengan API Instagram
 
-Untuk bisa mengakses data Instagram, kita memerlukan `access_token`.
+- Untuk bisa mengakses data Instagram, kita memerlukan `access_token`
+- Berikut langkah-langkah mendapatkannya
+
+--
+
+## Mendaftar Sebagai User Instagram
+
+- Kita perlu mendaftar sebagai user Instagram untuk mendapatkan hak sebagai developer
+- Bila sudah memiliki akun Instagram, langkah ini bisa dilewati
+
+--
+
+## Mendaftar Sebagai Developer Instagram
+
+- Selanjutnya daftarkan diri sebagai developer Instagram di developer.instagram.com
+- Kita akan mendapatkan `client_id` dan `client_secret` yang bisa digunakan di langkah berikutnya untuk mendapatkan `access_token`
 
 --
 
@@ -254,14 +271,30 @@ Untuk bisa mengakses data Instagram, kita memerlukan `access_token`.
 
 # Membaca Data dari API Instagram
 
-Kita akan menggunakan jQuery untuk memudahkan akses data Instagram.
+- Kita akan menggunakan jQuery untuk memudahkan akses data Instagram
+- Pemanggilan API Instagram akan menghasilkan sebuah file JSON yang berisi object-object JS
+- jQuery memungkinkan kita untuk melakukan pernyataan JS, tapi dengan cara yang lebih cepat, dengan logic yang sama
+- Untuk contoh ini, yang perlu diketahui adalah:
+  + jQuery memilih elemen HTML dengan cara `$(".kelasElemen")` atau `$("#tagElemen")`
+  + Mengambil JSON dilakukan dengan `$.get`
+  + Mengisi sebuah elemen HTML dilakukan dengan `$(".kelasElemen").append()`
+- Sisanya adalah JS biasa
 
 ---
 
 # Memfilter Berdasarkan Hashtag
 
 ```
+<ul class="insta-image">
+</ul>
+```
+```
 $.get("https://api.instagram.com/v1/tags/{tag-name}/media/recent?access_token=ACCESS-TOKEN", function(res) {
   // lakukan parsing terhadap json data di sini
+  // contoh mengambil 1 foto dari akun instagram saya
+  $(".insta-image").append("<li><a target='_blank' href='" + res.data[2].link + "'><img src='" + res.data[2].images.low_resolution.url + "'></img></a></li>");
+
 });
 ```
+
+---

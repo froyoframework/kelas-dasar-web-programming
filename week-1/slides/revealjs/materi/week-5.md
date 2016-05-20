@@ -221,21 +221,48 @@ var kopiku = {
 
 # API
 
+Application Programming Interface adalah antar muka (UI) yang disediakan oleh penyedia layanan agar aplikasi pihak ketiga dapat berinteraksi dengan data di dalamnya.
+
 ---
 
 # Menghubungkan dengan API Instagram
+
+Untuk bisa mengakses data Instagram, kita memerlukan `access_token`.
+
+--
+
+## Jalankan Mekanisme OAuth
+
+1. Akses url https://api.instagram.com/oauth/authorize/?client_id=CLIENT-ID&redirect_uri=REDIRECT-URI&response_type=token
+2. Dapatkan `access_token` dari url ini http://your-redirect-uri#access_token=ACCESS-TOKEN 
 
 ---
 
 # Membaca Data dari API Instagram
 
----
-
-# Menampilkan Foto dari Instagram
+- Kita akan menggunakan jQuery untuk memudahkan akses data Instagram
+- Ini akan memudahkan melakukan pemanggilan terhadap API Instagram
+- jQuery memungkinkan kita untuk melakukan pernyataan JS, tapi dengan cara yang lebih cepat, dengan logic yang sama
+- Untuk contoh ini, yang perlu diketahui adalah:
+  + jQuery memilih elemen HTML dengan cara `$(".kelasElemen")` atau `$("#tagElemen")`
+  + 
 
 ---
 
 # Memfilter Berdasarkan Hashtag
+
+```
+<ul class="insta-image">
+</ul>
+```
+```
+$.get("https://api.instagram.com/v1/tags/{tag-name}/media/recent?access_token=ACCESS-TOKEN", function(res) {
+  // lakukan parsing terhadap json data di sini
+  // contoh mengambil 1 foto dari akun instagram saya
+      $(".insta-image").append("<li><a target='_blank' href='" + res.data[2].link + "'><img src='" + res.data[2].images.low_resolution.url + "'></img></a></li>");
+
+});
+```
 
 ---
 
