@@ -40,7 +40,7 @@ console.log(jumlahKarakter);
 - `slice()` -> mengabil bagian dari 1 string dan mengembalikan string baru
 - `substr()` -> mengambil substring dengan menentukan posisi dan jumlah string yang ingin diambil
 - `trim()` -> menghilangkan whitespace dari kedua ujung string
-- `toLoweCase()`
+- `toLowerCase()`
 - `toUpperCase()`
 
 ---
@@ -110,7 +110,7 @@ beberapaNama.length;
 beberapaNama.push ("Tania")
 ```
 
---- 
+---
 
 # Fungsi Bawaan Array
 
@@ -258,13 +258,14 @@ var kopiku = {
 ## Mendaftar Sebagai Developer Instagram
 
 - Selanjutnya daftarkan diri sebagai developer Instagram di developer.instagram.com
+- Saat ini, bisa pilih redirect_uri = http://localhost
 - Kita akan mendapatkan `client_id` dan `client_secret` yang bisa digunakan di langkah berikutnya untuk mendapatkan `access_token`
 
 --
 
 ## Jalankan Mekanisme OAuth
 
-1. Akses url https://api.instagram.com/oauth/authorize/?client_id=CLIENT-ID&redirect_uri=REDIRECT-URI&response_type=token
+1. Akses url https://api.instagram.com/oauth/authorize/?client_id=CLIENT-ID&redirect_uri=REDIRECT-URI&response_type=token&scope=public_content
 2. Dapatkan `access_token` dari url ini http://your-redirect-uri#access_token=ACCESS-TOKEN 
 
 ---

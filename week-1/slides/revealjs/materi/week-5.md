@@ -40,7 +40,7 @@ console.log(jumlahKarakter);
 - `slice()` -> mengabil bagian dari 1 string dan mengembalikan string baru
 - `substr()` -> mengambil substring dengan menentukan posisi dan jumlah string yang ingin diambil
 - `trim()` -> menghilangkan whitespace dari kedua ujung string
-- `toLoweCase()`
+- `toLowerCase()`
 - `toUpperCase()`
 
 ---
@@ -81,6 +81,20 @@ console.log(beberapaNama);
 
 ---
 
+# Mengakses Elemen Array dengan Loop For
+
+- Menggunakan loop for, kita bisa dengan mudah mengakses elemen array tanpa perlu memanggilnya satu persatu
+- Kita gunakan 1 variabel untuk menunjuk elemen array
+
+```
+var namaHari = ["Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu", "Minggu"];
+for (var i = 0; i < 10; i++) {
+    console.log(namaHari[i]);
+}
+```
+
+---
+
 # Property Array
 
 - Untuk menguji ukuran array (berapa banyak elemen di dalam array), kita bisa menggunakan `length()`
@@ -96,7 +110,7 @@ beberapaNama.length;
 beberapaNama.push ("Tania")
 ```
 
---- 
+---
 
 # Fungsi Bawaan Array
 
@@ -221,19 +235,37 @@ var kopiku = {
 
 # API
 
-Application Programming Interface adalah antar muka (UI) yang disediakan oleh penyedia layanan agar aplikasi pihak ketiga dapat berinteraksi dengan data di dalamnya.
+- Application Programming Interface adalah antar muka (UI) yang disediakan oleh penyedia layanan agar aplikasi pihak ketiga dapat berinteraksi dengan data di dalamnya
+- Dengan demikian, maka kita bisa mengakses bagian dalam dari sebuah program, melalui program lain
+- Di kasus kita, kita akan menggunakan script buatan kita, untuk mendapatkan gambar dari Instagram lalu ditampilkan di web page kita
 
 ---
 
 # Menghubungkan dengan API Instagram
 
-Untuk bisa mengakses data Instagram, kita memerlukan `access_token`.
+- Untuk bisa mengakses data Instagram, kita memerlukan `access_token`
+- Berikut langkah-langkah mendapatkannya
+
+--
+
+## Mendaftar Sebagai User Instagram
+
+- Kita perlu mendaftar sebagai user Instagram untuk mendapatkan hak sebagai developer
+- Bila sudah memiliki akun Instagram, langkah ini bisa dilewati
+
+--
+
+## Mendaftar Sebagai Developer Instagram
+
+- Selanjutnya daftarkan diri sebagai developer Instagram di developer.instagram.com
+- Saat ini, bisa pilih redirect_uri = http://localhost
+- Kita akan mendapatkan `client_id` dan `client_secret` yang bisa digunakan di langkah berikutnya untuk mendapatkan `access_token`
 
 --
 
 ## Jalankan Mekanisme OAuth
 
-1. Akses url https://api.instagram.com/oauth/authorize/?client_id=CLIENT-ID&redirect_uri=REDIRECT-URI&response_type=token
+1. Akses url https://api.instagram.com/oauth/authorize/?client_id=CLIENT-ID&redirect_uri=REDIRECT-URI&response_type=token&scope=public_content
 2. Dapatkan `access_token` dari url ini http://your-redirect-uri#access_token=ACCESS-TOKEN 
 
 ---
@@ -241,11 +273,13 @@ Untuk bisa mengakses data Instagram, kita memerlukan `access_token`.
 # Membaca Data dari API Instagram
 
 - Kita akan menggunakan jQuery untuk memudahkan akses data Instagram
-- Ini akan memudahkan melakukan pemanggilan terhadap API Instagram
+- Pemanggilan API Instagram akan menghasilkan sebuah file JSON yang berisi object-object JS
 - jQuery memungkinkan kita untuk melakukan pernyataan JS, tapi dengan cara yang lebih cepat, dengan logic yang sama
 - Untuk contoh ini, yang perlu diketahui adalah:
   + jQuery memilih elemen HTML dengan cara `$(".kelasElemen")` atau `$("#tagElemen")`
-  + 
+  + Mengambil JSON dilakukan dengan `$.get`
+  + Mengisi sebuah elemen HTML dilakukan dengan `$(".kelasElemen").append()`
+- Sisanya adalah JS biasa
 
 ---
 
@@ -259,11 +293,9 @@ Untuk bisa mengakses data Instagram, kita memerlukan `access_token`.
 $.get("https://api.instagram.com/v1/tags/{tag-name}/media/recent?access_token=ACCESS-TOKEN", function(res) {
   // lakukan parsing terhadap json data di sini
   // contoh mengambil 1 foto dari akun instagram saya
-      $(".insta-image").append("<li><a target='_blank' href='" + res.data[2].link + "'><img src='" + res.data[2].images.low_resolution.url + "'></img></a></li>");
+  $(".insta-image").append("<li><a target='_blank' href='" + res.data[2].link + "'><img src='" + res.data[2].images.low_resolution.url + "'></img></a></li>");
 
 });
 ```
 
 ---
-
-
