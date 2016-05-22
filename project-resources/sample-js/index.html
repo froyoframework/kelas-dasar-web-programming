@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SAMPLE</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+  </head>
+
+  <body>
+    <h2>Comments</h2>
+
+    <div id="comments">
+      <!-- tampilkan comment di sini -->
+
+    </div>
+
+    <div id="banner">
+
+    </div>
+
+    <form id="registration">
+      <input id="username" placeholder="username">
+      <input id="password" placeholder="password">
+      <button id="submit">Submit</button>
+    </form>
+    <script> 
+    // OBJECT
+    var newUser = {
+      username: "",
+      password: "",
+      createUser: function() {
+        alert("Username: " + this.username);  
+      }
+    };
+    
+    // SAAT DITEKAN
+    $("#submit").click(function(e) {
+      e.preventDefault();
+
+      newUser.username = $("#username").val();
+      
+      // JALANKAN CREATE USER
+      newUser.createUser();
+    });
+    
+
+    // CARA LAIN BIKIN OBJECT
+    var locationData = new Object();
+    locationData.venueName = "Monas";
+    locationData.address = "Jakarta Pusat";
+    locationData.runAround = function() {
+      // lakukan sesuatu
+    };
+    </script>
+  </body>
+</html>
